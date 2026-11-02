@@ -1,0 +1,19 @@
+{
+  "name": "sap-mini-erp",
+  "private": true,
+  "description": "面向学习者的 SAP 风格迷你 ERP（O2C + P2P + 库存 + 简易财务）",
+  "workspaces": ["apps/api", "apps/web"],
+  "scripts": {
+    "dev": "concurrently -n api,web -c cyan,magenta \"npm run dev:api\" \"npm run dev:web\"",
+    "dev:api": "npm run start:dev -w api",
+    "dev:web": "npm run dev -w web",
+    "seed": "npm run seed -w api",
+    "build": "npm run build -w api && npm run build -w web"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

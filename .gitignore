@@ -1,0 +1,10 @@
+node_modules
+dist
+build
+.DS_Store
+*.log
+apps/api/data/*.sqlite
+apps/api/data/*.sqlite-*
+.idea
+.vscode
+*.tsbuildinfo
